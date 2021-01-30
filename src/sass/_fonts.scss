@@ -1,0 +1,43 @@
+//***************
+//*****fonts*****
+//***************
+	
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+
+@mixin font($f-name, $f-style, $f-weight, $f-url) {
+	@font-face {
+		font-family: $f-name;
+		font-style: $f-style;
+		font-weight: $f-weight;
+		src: url($f-url+".woff") format("woff"), url($f-url+".woff2") format("woff2");
+	}
+}
+
+
+@include font('Montserrat', normal, 300, '../fonts/Montserrat/Montserrat-Light');
+@include font('Montserrat', normal, 400, '../fonts/Montserrat/Montserrat-Regular');
+@include font('Montserrat', normal, 600, '../fonts/Montserrat/Montserrat-SemiBold');
+@include font('Montserrat', normal, 700, '../fonts/Montserrat/Montserrat-Bold');
+@include font('Montserrat', normal, 800, '../fonts/Montserrat/Montserrat-ExtraBold');
+
+
+@include font('OpenSans', italic, 400, '../fonts/Open_Sans/OpenSans-Italic');
+@include font('OpenSans', normal, 400, '../fonts/Open_Sans/OpenSans-Regular');
+
+@include font('Raleway', normal, 500, '../fonts/Raleway/Raleway-Medium');
+
+
+
+
+
+
