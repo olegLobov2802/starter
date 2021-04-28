@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 1rem => 10px*/
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.container {
+	@include min-max(320px, 100%, 0);
+}
+
+.wrap {
+	@include min-max(320px, 1200px, 15px);
+}
